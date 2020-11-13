@@ -1,0 +1,92 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+} 
+
+body{
+    font-family: 'Alegreya', serif;
+    /* font-family: 'Playfair Display', serif; */
+    width: 1600px;
+    /*  width: 100%; */ /*ширина блока*/
+     margin: 0 auto; /*выровниваем по центру*/
+}
+
+/* fonts
+font-family: 'Scriptina', arial;
+fonts */
+
+/*----------------------navl-----------------------------*/
+.nav{
+    color:#ffffff;
+    height: 900px;
+    background: #252e30 url("../img/border.jpg") center no-repeat;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/*----------------------nav_-----------------------------*/
+/* Style for "Gustoso" */
+.nav__logo{
+    /* Style for "Gustoso" */
+font-family: Scriptina;
+font-size: 30px;
+font-weight: 400;
+font-style: normal;
+letter-spacing: normal;
+line-height: 24px;
+text-align: left;
+
+
+letter-spacing: 9px;
+line-height: normal;
+}
+
+/*-------------------------nav__menu--------------------------*/
+.nav__menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.nav__menu ul li{
+    list-style-type: none;
+    margin: 0 10px;    
+    font-family: Alegreya;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4.2px;
+    line-height: normal;
+}
+/*-------------------------nav__menu--------------------------*/
+
+/*----------------------nav__social-----------------------------*/
+
+.nav__social ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.nav__social ul li{
+    list-style-type: none;
+    margin: 0 10px;  
+}
+.fab{
+    color: #ffffff;
+    font-size: 16px;
+}    
+.fab:hover{
+    color: #2ac2c8;
+}
+
+
+/*-------------------------nav__social--------------------------*/
