@@ -5,46 +5,70 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+    box-sizing: border-box;
+    text-decoration: none;
 } 
 
 body{
     font-family: 'Alegreya', serif;
-    /* font-family: 'Playfair Display', serif; */
-    width: 1600px;
-    /*  width: 100%; */ /*ширина блока*/
-     margin: 0 auto; /*выровниваем по центру*/
+
+    
 }
 
 /* fonts
 font-family: 'Scriptina', arial;
 fonts */
 
-/*----------------------navl-----------------------------*/
+
+/* Page */
+.page {
+    overflow: hidden;
+    width: 1600px;   
+    margin: 0 auto; /*выровниваем по центру*/
+}
+
+
+/*----------------------nav-----------------------------*/
 .nav{
-    color:#ffffff;
-    height: 900px;
-    background: #252e30 url("../img/border.jpg") center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    
+    height: 70px;
+    background-color: rgba(86, 83, 76, 0.529);
+}
+
+.nav__box {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 15px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
-/*----------------------nav_-----------------------------*/
-/* Style for "Gustoso" */
+
+
+  
+/*----------------------nav-----------------------------*/
+
 .nav__logo{
-    /* Style for "Gustoso" */
-font-family: Scriptina;
-font-size: 30px;
-font-weight: 400;
-font-style: normal;
-letter-spacing: normal;
-line-height: 24px;
-text-align: left;
-
-
-letter-spacing: 9px;
-line-height: normal;
+    color: #ffffff;
+    font-family: Scriptina;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 9px;
+    line-height: normal;
+    cursor: pointer;
 }
 
 /*-------------------------nav__menu--------------------------*/
@@ -52,6 +76,7 @@ line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center; 
+    
 }
 .nav__menu ul li{
     list-style-type: none;
@@ -60,12 +85,10 @@ line-height: normal;
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: normal;
-    line-height: 24px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 4.2px;
-    line-height: normal;
+    color: #ffffff;
+    cursor: pointer;
 }
 /*-------------------------nav__menu--------------------------*/
 
@@ -78,7 +101,8 @@ line-height: normal;
 }
 .nav__social ul li{
     list-style-type: none;
-    margin: 0 10px;  
+    margin: 0 10px; 
+    cursor: pointer; 
 }
 .fab{
     color: #ffffff;
@@ -90,3 +114,102 @@ line-height: normal;
 
 
 /*-------------------------nav__social--------------------------*/
+/*----------------------border-----------------------------*/
+.border{
+    color:#ffffff;
+    height: 900px;
+    background: #252e30 url("../img/border.jpg") center no-repeat;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+}
+.bg_shadow{
+    /* Style for "bg_shadow" */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -72%);
+    width: 939px;
+    height: 897px;
+    /* background-color: #834f4e; */
+    background-image: radial-gradient(circle 457px at center, #564f4c 0%, rgba(86, 83, 76, 0) 100%);
+    opacity: 0.71;  
+    z-index: 100;
+   
+
+
+    
+}
+.border__box{      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 940px;
+    position: relative;
+    align-items: center;
+   /*  -webkit-background-size: cover; */
+}
+.border__title{
+    text-shadow: 0 1px 0 #3d3029;
+    color: #ffffff;   
+    font-family: 'Playfair Display', serif;
+    font-size: 92px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 24px;   
+    letter-spacing: 6.9px;
+}
+
+.border__dashed-lin{
+    padding: 56px 0 71px;
+    color: #ffffff;
+}
+.border__text{   
+    width: 544px;
+    text-shadow: 0 1px 0 #3d3029;
+    color: #ffffff;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 36px;
+    letter-spacing: 2.4px;
+    padding-bottom: 70px;
+    
+}
+
+.border__btn{
+        font-size: 14px;
+        font-family: "Alegreya";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.714;
+        border-width: 1px;
+        border-color: rgb(158, 156, 147);
+        border-style: dashed;
+        background-color: rgba(86, 83, 76, 0.529);
+        width: 200px;
+        height: 50px;
+        line-height: 24px;        
+        letter-spacing: 4.2px;
+        outline: none; /*убирает черный бордер при клике по кнопке*/
+        cursor: pointer;   
+        z-index: 101;   
+      }
+      
+      .border__vektor-smartobjekt{
+          position: absolute ;
+          left:50%;
+          bottom: -53px;
+          z-index: 100;
+
+          
+      }
+
+/*----------------------border-----------------------------*/
+
+
