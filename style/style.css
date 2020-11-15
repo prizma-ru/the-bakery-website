@@ -216,21 +216,21 @@ fonts */
 .cakes{
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 105px;
 
 }
 .cakes__box{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
 .cakes__info{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* CSS свойство , указывающее на то,как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed).*/
     justify-content: center;
     align-items: center;
-    flex: 0.5;
+    flex: 0.45;
 }
 .cakes__title{
     text-align: center;
@@ -326,9 +326,11 @@ fonts */
 .quote__text{
         font-size: 24px;
         font-family: "Scriptina";
-        color: rgb(164, 125, 94);
-        line-height: 1.25;
+        color: #a47d5e;
         text-align: center;
+        width: 236px;
+        height: 57px;
+        line-height: 30px;
 }
 
 .cakes__napkin{
@@ -364,15 +366,34 @@ fonts */
 
 .cakes___items{
     display: flex;
-    justify-content: space-between;
+    justify-content: center ;
     flex-wrap: wrap;
     align-items: center;
-    flex: 0.5;
+    flex: 0.55;
+   
     position: relative;
 }
 .cakes___item{
     position: relative;
+    margin: 10px;
 }
+
+.cakes___item:nth-child(1){
+    margin: 0px 10px 10px 0;
+}
+.cakes___item:nth-child(2){
+    margin: 0px 0px 10px 10px;
+}
+.cakes___item:nth-child(3){
+    margin: 10px 10px 0px 0;
+}
+.cakes___item:nth-child(4){
+    margin: 10px 0px 0px 10px;
+}
+
+
+
+
 .cakes___border{
     position: absolute;
     /* Style for "border" */
@@ -387,3 +408,263 @@ fonts */
 
 
 /*----------------------cakes-----------------------------*/
+/*----------------------recipes-----------------------------*/
+.recipes{
+    color:#ffffff;
+    height: 760px;
+    background: #252e30 url("../img/recipes.jpg") center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* overflow: hidden; */
+
+}   
+.recipes__box{
+    width: 970px;   
+    position: relative; 
+    display: flex;
+/*     justify-content: space-between;
+    align-items: center; */
+}
+
+
+.recipes__items{
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* CSS свойство , указывающее на то,как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed).*/
+    position: relative;
+    background-color: #ffffff;
+}
+.recipes__img{
+    width: 420px;
+    height: 512px;
+    position: relative;
+    /* margin-bottom: 20px; */
+   
+    overflow: hidden;
+}
+.recipes__img img{
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+}
+.recipes__stars{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;   
+    transform: translate3d(-50%, -50%, 0);   
+}
+.recipes__stars ul li{
+    list-style-type: none; /*Изменяет вид маркера для каждого элемента списка. Это свойство используется только в случае, когда значение list-style-image установлено как none. Маркеры различаются для маркированного списка (тег <ul>) и нумерованного (тег <ol>).*/
+}
+.recipes__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipes__title{    
+    font-size: 48px;
+    font-family: "Alegreya";
+    color: rgb(86, 83, 76);
+    font-weight: bold;
+    line-height: 0.625;
+    text-align: left;
+    padding-top: 80px;      
+}
+.recipes__subtitle{
+    color: #a47d5e;
+    font-family: Alegreya;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-align: left;
+   /*  padding-bottom: 70px; */
+}
+
+.recipes__text{
+    font-size: 14px;
+    font-family: "Proxima Nova";
+    color: rgb(86, 83, 76);
+    line-height: 1.714;
+    text-align: justify; /* Выравнивание по ширине */    
+    letter-spacing: 1.4px;
+    padding: 0 85px;
+
+}
+  
+
+
+.recipes__slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 41px;
+}
+.slider__img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    overflow: hidden;
+    border-radius:50% ;
+}
+.img__item{
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate3d(-50%, -50%, 0);
+}
+.recipes__mill-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+.slider__img:nth-child(3){
+    margin: 0 20px;
+}
+
+.slider__left{
+    margin-right: 15px;
+}
+.slider__right{
+    margin-left: 15px;
+}
+
+.ready__icon{
+    width: 200px;
+    height: 200px;;
+    position: absolute;
+    
+    top: -10%;
+    right: -20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: #ffffff url("../img/ready-icon.png") center no-repeat;  
+    -webkit-box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5);
+    -moz-box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5);
+    box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5); 
+}
+
+
+.ready__title{
+    color: #a47d5e;
+    font-family: Alegreya;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;        
+}
+.ready__time{
+    font-family: Alegreya;
+    font-weight: 700;
+    color: #dfc691;
+    font-size: 92px;
+    font-style: normal;
+    letter-spacing: 1.8px;
+    line-height: normal;
+}
+.ready__mins{
+    color: #979285;
+    font-style: normal;
+    letter-spacing: 1.8px;
+    line-height: normal;
+}
+
+
+/*----------------------recipes-----------------------------*/
+/*----------------------breakfast-----------------------------*/
+.breakfast{
+height: 760px;
+background: #252e30 url("../img/breakfast.jpg") center no-repeat;
+
+}
+/*----------------------breakfast-----------------------------*/
+/*----------------------footer-----------------------------*/
+.footer{
+    background-color: #f3f1e9;
+}
+.footer__box{
+    width: 100%;
+    max-width: 1200px;
+    height: 240px;
+    margin: 0 auto ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*----------------------footer-----------------------------*/
+
+
+
+.footer__logo{
+    color: #56534c;
+    font-family: Scriptina;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 9px;
+    cursor: pointer;
+}
+
+
+
+/*-------------------------nav__menu--------------------------*/
+/* .nav__menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+} */
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid  #c2beba;
+    border-top: 1px solid  #c2beba;
+    padding: 0 50px;
+}
+.footer__menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 30px 0;
+}
+.footer__menu ul li{
+    list-style-type: none;
+    margin: 0 10px;    
+    font-family: Alegreya;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #56534c;
+    cursor: pointer;
+    letter-spacing: 4.2px;
+    -webkit-box-shadow: -8px 7px 91px -14px rgba(243, 241, 233,1);
+    -moz-box-shadow: -8px 7px 91px -14px rgba(243, 241, 233,1);
+    box-shadow: -8px 7px 91px -14px rgba(243, 241, 233,1);
+}
+
+
+
+
