@@ -218,7 +218,7 @@ fonts */
       .border__vektor-smartobjekt{
           position: absolute ;
           left:50%;
-          bottom: -53px;
+            bottom: -65px;
           z-index: 100;
 
           
@@ -542,6 +542,7 @@ fonts */
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 0;
 
 }
 .slider__img:nth-child(3){
@@ -550,9 +551,12 @@ fonts */
 
 .slider__left{
     margin-right: 15px;
+    cursor: pointer;
 }
 .slider__right{
     margin-left: 15px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .ready__icon{
