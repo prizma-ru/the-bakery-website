@@ -1,3 +1,15 @@
+    @font-face {
+        font-family: 'Proxima Nova';
+        src: url('../fonts/ProximaNova-Regular.eot');
+        src: local('../fonts/Proxima Nova Regular'), local('../fonts/ProximaNova-Regular'),
+            url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/ProximaNova-Regular.woff') format('woff'),
+            url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
 /*Обнуление*/
 *,
 *:before,
@@ -199,7 +211,8 @@ fonts */
         letter-spacing: 4.2px;
         outline: none; /*убирает черный бордер при клике по кнопке*/
         cursor: pointer;   
-        z-index: 101;   
+        z-index: 101;  
+        outline: none; /*убирает черный бордер при клике по кнопке*/ 
       }
       
       .border__vektor-smartobjekt{
@@ -551,13 +564,17 @@ fonts */
     right: -20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
+ 
+}
+.icon-bg{
     background: #ffffff url("../img/ready-icon.png") center no-repeat;  
     -webkit-box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5);
     -moz-box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5);
-    box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5); 
+    box-shadow: -15px 25px 40px -15px rgba(0,0,0,0.5);
 }
+
 
 
 .ready__title{
@@ -594,8 +611,224 @@ fonts */
 height: 760px;
 background: #252e30 url("../img/breakfast.jpg") center no-repeat;
 
+
 }
 /*----------------------breakfast-----------------------------*/
+/*----------------------sandwich-----------------------------*/
+.sandwich{
+    background-color: #f3f1e9;
+}
+.sandwich__heading{
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+.sandwich__logo{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -0%, 0);
+}
+
+.sandwich__title{
+    font-family: Alegreya;
+    font-weight: 700;
+    color: #56534c;
+    font-size: 48px;
+    font-style: normal;
+    letter-spacing: 1.2px;
+    line-height: normal;
+    text-align: center;
+    padding-top: 100px;
+
+}
+.sandwich__text{
+    font-style: normal;
+    letter-spacing: 1.4px;
+    line-height: normal;
+    color: #a47d5e;
+    font-family: Alegreya;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.sandwich__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sandwich__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    align-items: center;
+    margin-bottom: 57px;
+    width: 310px;
+
+    
+}
+.item__img{
+    width: 100px;
+    height: 100px;    
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 21px;
+}
+
+.item__img img{
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-size:cover;
+    transform: translate3d(-50%, -50%, 0);
+}
+.item__title{
+    color: #a47d5e;
+    font-family: Alegreya;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    margin-bottom: 23px;
+
+}
+.item__text{
+    color: #56534c;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    padding-bottom: 57px;
+
+}
+.sandwich__item:last-child{
+    margin-bottom: 0;
+
+}
+.sandwich__recipe{
+    width: 840px;
+    height: 560px;
+/*     border: 10px solid #ffffff; */
+    
+}
+.recipe__img{
+   
+    object-fit: cover; /*Сохранение соотношения сторон контента, но изменение его ширины и высоты. Таким образом, контент полностью покрывает элемент. Меньшая из двух сторон изменяется до размеров контейнера, а большая – выходит за рамки элемента и обрезается.
+    https://css-live.ru/articles/znakomstvo-s-object-fit.html*/
+    height: 100%;
+    width: 100%;
+    border: 10px solid #ffffff;
+    -webkit-box-shadow: 0px 14px 13px 0px rgba(232,228,212,1);
+    -moz-box-shadow: 0px 14px 13px 0px rgba(232,228,212,1);
+    box-shadow: 0px 14px 13px 0px rgba(232,228,212,1);
+}
+
+.recipe__box{
+    position: relative;
+}
+.recipe__time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  /*   max-width: 100%; */
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    z-index: 1;
+    transform: translate3d(0%, -50%, 0);
+}
+.ready__icon:first-child{
+    margin-bottom: 1px;;
+}
+
+.recipe__time .ready__icon{
+    position: static;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+.recipe__time .ready__icon:nth-child(-n+2){
+    opacity: 0.8;
+}
+
+
+.recipe__time .ready__icon:nth-child(-n+2) .ready__title{
+    font-family: Alegreya;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;   
+}
+.recipe__time .ready__icon:nth-child(-n+2) .ready__time{
+    font-family: Alegreya;
+    font-weight: 700;
+    color: #56534c;
+    font-size: 60px;
+    font-style: normal;
+    letter-spacing: 6px;
+    line-height: normal;
+   
+}
+.recipe__time .ready__icon:nth-child(-n+2) .ready__mins{
+    font-family: Alegreya;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #979285;
+    letter-spacing: 1.8px;
+    line-height: normal;    
+}
+.recipe__time .ready__icon.icon-bg{
+    -webkit-box-shadow: 0px 14px 13px 0px rgba(232,228,212,1);
+    -moz-box-shadow: 0px 14px 13px 0px rgba(232,228,212,1);
+    box-shadow: 0px 14px 13px 0px rgba(232,228,212,1);
+}
+
+.recipe_btn{
+    width: 171px;
+    height: 60px;
+    border: 1px dashed #dfc691;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -3%;
+    left: -5%;
+    z-index: 1;
+   /*  transform: translate3d(-50%, -50%, 0); */
+   /* Style for "FULL RECIP" */
+
+    color: #dfc691;
+    font-family: Alegreya;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    outline: none; /*убирает черный бордер при клике по кнопке*/
+    cursor: pointer; 
+
+}
+
+/*----------------------sandwich-----------------------------*/
 /*----------------------footer-----------------------------*/
 .footer{
     background-color: #f3f1e9;
@@ -610,7 +843,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     align-items: center;
 }
 
-/*----------------------footer-----------------------------*/
+
 
 
 
@@ -627,14 +860,6 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
 }
 
 
-
-/*-------------------------nav__menu--------------------------*/
-/* .nav__menu ul{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    
-} */
 .footer__menu {
     display: flex;
     justify-content: space-between;
@@ -665,6 +890,6 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     box-shadow: -8px 7px 91px -14px rgba(243, 241, 233,1);
 }
 
-
+/*----------------------footer-----------------------------*/
 
 
