@@ -71,7 +71,7 @@ fonts */
 
 .nav__logo{
     color: #ffffff;
-    font-family: Scriptina;
+    font-family: "Scriptina";
     font-size: 30px;
     font-weight: 400;
     font-style: normal;
@@ -93,7 +93,7 @@ fonts */
 .nav__menu ul li{
     list-style-type: none;
     margin: 0 10px;    
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
@@ -135,25 +135,21 @@ fonts */
     justify-content: space-between;
     position: relative;
     margin-bottom: 105px;
-    
+    z-index: 1;
 }
 .bg_shadow{
     /* Style for "bg_shadow" */
     position: absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%, -72%);
+    transform:translate(-50%, -50%);
     width: 939px;
     height: 897px;
     /* background-color: #834f4e; */
-    background-image: radial-gradient(circle 457px at center, #564f4c 0%, rgba(86, 83, 76, 0) 100%);
-    opacity: 0.71;  
-    z-index: 100;
-   
-
-
-    
+    background-image: radial-gradient(circle 457px at center, #564f4c 0%, rgba(88, 87, 85, 0) 100%);    
+    z-index: 2;
 }
+
 .border__box{      
     display: flex;
     flex-direction: column;
@@ -164,6 +160,7 @@ fonts */
     position: relative;
     align-items: center;
    /*  -webkit-background-size: cover; */
+   z-index: 3;
 }
 .border__title{
     text-shadow: 0 1px 0 #3d3029;
@@ -195,35 +192,30 @@ fonts */
 }
 
 .border__btn{
-        font-size: 14px;
-        font-family: "Alegreya";
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1.714;
-        border-width: 1px;
-        border-color: rgb(158, 156, 147);
-        border-style: dashed;
-        background-color: rgba(86, 83, 76, 0.529);
-        width: 200px;
-        height: 50px;
-        line-height: 24px;        
-        letter-spacing: 4.2px;
-        outline: none; /*убирает черный бордер при клике по кнопке*/
-        cursor: pointer;   
-        z-index: 101;  
-        outline: none; /*убирает черный бордер при клике по кнопке*/ 
-      }
+    font-size: 14px;
+    font-family: "Alegreya";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.714;
+    border-width: 1px;
+    border-color: rgb(158, 156, 147);
+    border-style: dashed;
+    background-color: rgba(86, 83, 76, 0.529);
+    width: 200px;
+    height: 50px;
+    line-height: 24px;        
+    letter-spacing: 4.2px;    
+    outline: none; /*убирает черный бордер при клике по кнопке*/ 
+    cursor: pointer;
+}
       
-      .border__vektor-smartobjekt{
-          position: absolute ;
-          left:50%;
-            bottom: -65px;
-          z-index: 100;
-
-          
-      }
-
+.border__vektor-smartobjekt{
+    position: absolute ;
+    left:50%;
+    bottom: -65px;
+    z-index: 100;          
+ }
 /*----------------------border-----------------------------*/
 /*----------------------cakes-----------------------------*/
 .cakes{
@@ -551,10 +543,13 @@ fonts */
 
 .slider__left{
     margin-right: 15px;
+   /*  align-self: flex-start; */
     cursor: pointer;
+    z-index: 1;
 }
 .slider__right{
     margin-left: 15px;
+    /* align-self: flex-end; */
     cursor: pointer;
     z-index: 1;
 }
@@ -614,9 +609,210 @@ fonts */
 .breakfast{
 height: 760px;
 background: #252e30 url("../img/breakfast.jpg") center no-repeat;
-
+position: relative;
+}
+.spike{
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    z-index: 5;
+}
+.breakfast_box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 89px;
 
 }
+.breakfast__items{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 180px;
+}
+
+.breakfast__titel{
+    color: #ffffff;
+    font-family: "Alegreya";
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    text-align: center;
+/* Text style for "Duis ut to" */
+}
+.breakfast__text{
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    line-height: normal;
+    color: #c2beba;  
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+.breakfast__price{
+    color: #dfc691;
+    font-family: Alegreya;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1.8px;
+}
+
+
+.breakfast__item:first-child .breakfast__titel{
+    font-size: 60px;
+    font-family: "Alegreya";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 0.5;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.breakfast__item:first-child .breakfast__text{
+    color: #c8a593;
+    font-family: "Alegreya";
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+}
+
+.breakfast__menu{
+    position: relative;
+}
+.breakfast__menu-1{
+    width: 440px;
+    height: 600px;
+    background-color: #f3f1e9;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%, 0 95%);
+    position: relative;
+    z-index: 4;
+    display: flex;
+    padding: 10px;
+
+}
+.breakfast__menu-2{
+    width: 402px;
+    height: 548px;
+    background-color: #d9d6c7;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%, 0 95%);
+    position: absolute; 
+    top:50%;
+    left: 57%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 2;
+    display: flex;
+    padding: 10px;  
+}
+.breakfast__menu-3{
+    width: 367px;
+    height: 501px;
+    background-color:#d9d6c7;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%, 0 95%);
+    position: absolute;   
+    top:50%;
+    left: 64%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+    display: flex;
+    padding: 10px;   
+}
+
+.menu__border{   
+    align-self:auto; /*Свойство align-self
+    Переопределяет для конкретного flex-элемента выравнивание вдоль поперечной оси (направление зависит от значения свойства flex-direction)*/
+    flex-grow:1; /*Определяет возможность элемента увеличиваться в размере, при необходимости заполняя весь flex-контейнер. 0 запрещено. 1 разрешено. */
+    border: 1px dashed #9e9c93;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 44px;
+}
+.breakfast__year{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #56534c;
+    font-family: "Alegreya";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+
+    letter-spacing: 0.7px;
+
+}
+
+.breakfast__corner{
+    position: absolute;
+    left: -8px;
+    bottom: -15px;
+}
+.menu__border h1{
+    color: #56534c;
+    font-family: "Alegreya";
+    font-size: 44px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 1.1px;
+    margin: 0 40px;
+    padding-bottom: 43px;
+}
+
+.menu__border h2{
+    color: #56534c;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    margin: 0 40px;
+    padding-bottom: 74px;
+}
+
+.breakfast__btn{
+    width: 190px;
+    height: 50px;
+    border: 1px solid #9e9c93;
+    color: #a47d5e;
+    font-family: "Alegreya";
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;    
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase; 
+    letter-spacing: 0.9px;
+    background-color: transparent; /*устанавливает прозрачный фон кнопке*/
+    cursor: pointer;
+   
+}
+.breakfast__img{
+    padding-bottom: 30px;
+}
+
 /*----------------------breakfast-----------------------------*/
 /*----------------------sandwich-----------------------------*/
 .sandwich{
@@ -636,7 +832,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
 }
 
 .sandwich__title{
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-weight: 700;
     color: #56534c;
     font-size: 48px;
@@ -645,21 +841,19 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     line-height: normal;
     text-align: center;
     padding-top: 100px;
-
 }
 .sandwich__text{
     font-style: normal;
     letter-spacing: 1.4px;
     line-height: normal;
     color: #a47d5e;
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 14px;
     font-weight: 700;
     font-style: normal;
     line-height: 30px;
     text-align: center;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;    
 }
 .sandwich__box{
     display: flex;
@@ -671,11 +865,9 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     align-items: center;
     margin-bottom: 57px;
     width: 310px;
-
     
 }
 .item__img{
@@ -684,7 +876,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 21px;
+    margin-bottom: 21px;    
 }
 
 .item__img img{
@@ -694,11 +886,11 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     left: 50%;
     z-index: 1;
     background-size:cover;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);    
 }
 .item__title{
     color: #a47d5e;
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 30px;
     font-weight: 700;
     font-style: normal;
@@ -706,7 +898,6 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     text-align: center;
     letter-spacing: 0.75px;
     margin-bottom: 23px;
-
 }
 .item__text{
     color: #56534c;
@@ -718,20 +909,16 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     text-align: center;
     letter-spacing: 1.4px;
     padding-bottom: 57px;
-
 }
 .sandwich__item:last-child{
     margin-bottom: 0;
-
 }
 .sandwich__recipe{
     width: 840px;
     height: 560px;
-/*     border: 10px solid #ffffff; */
-    
+/*     border: 10px solid #ffffff; */    
 }
 .recipe__img{
-   
     object-fit: cover; /*Сохранение соотношения сторон контента, но изменение его ширины и высоты. Таким образом, контент полностью покрывает элемент. Меньшая из двух сторон изменяется до размеров контейнера, а большая – выходит за рамки элемента и обрезается.
     https://css-live.ru/articles/znakomstvo-s-object-fit.html*/
     height: 100%;
@@ -771,7 +958,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
 
 
 .recipe__time .ready__icon:nth-child(-n+2) .ready__title{
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 18px;
     font-weight: 700;
     font-style: normal;
@@ -781,7 +968,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
     text-transform: uppercase;   
 }
 .recipe__time .ready__icon:nth-child(-n+2) .ready__time{
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-weight: 700;
     color: #56534c;
     font-size: 60px;
@@ -791,7 +978,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
    
 }
 .recipe__time .ready__icon:nth-child(-n+2) .ready__mins{
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 18px;
     font-weight: 700;
     font-style: normal;
@@ -819,7 +1006,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
    /* Style for "FULL RECIP" */
 
     color: #dfc691;
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
@@ -853,7 +1040,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
 
 .footer__logo{
     color: #56534c;
-    font-family: Scriptina;
+    font-family: "Scriptina";
     font-size: 30px;
     font-weight: 400;
     font-style: normal;
@@ -880,7 +1067,7 @@ background: #252e30 url("../img/breakfast.jpg") center no-repeat;
 .footer__menu ul li{
     list-style-type: none;
     margin: 0 10px;    
-    font-family: Alegreya;
+    font-family: "Alegreya";
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
